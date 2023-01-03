@@ -1,0 +1,27 @@
+<html>
+    <head>
+    <title>hola</title>
+        <link rel="stylesheet" href="chosen.css">
+        <link rel="stylesheet" href="ImageSelect.css">
+        
+        <script src="jquery-1.11.0.min.js"></script>
+        <script src="chosen.jquery.js"></script>
+        <script src=ImageSelect.jquery.js></script>
+        
+    </head>
+    <body>
+        <select class="my-select">
+         <option data-img-src="iconos/cocos+.png">Adnan Sagar</option>
+         <option selected="selected" data-img-src="img/rena.png">Rena Cugelman</option>
+         <option data-img-src="img/tavis.png">Tavis Lochhead</option>
+         <option data-img-src="img/brian.png">Brain Cugelman</option>
+        </select>
+        
+        <script>
+        $(".my-select").chosen({
+         width:"100%",
+         html_template: '<img style="padding:0px;margin-right:4px" class="{class_name}" src="{url}">'
+         });
+        </script>
+    </body>
+</html>

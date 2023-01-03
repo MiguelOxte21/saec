@@ -1,0 +1,20 @@
+ -- Clonar Repositorio --
+git clone https://github.com/JesusMedinaDzib/congreso.git
+
+-- VER ARCHIVOS AFECTADOS --
+git status
+
+ -- VER LINEAS AFECTADAS --
+git add (archivo.extencion)
+git diff
+
+ -- SUBIR ARCHIVOS AL REPOSITORIO --
+git add .
+git commit -m "comentario"
+git push
+
+ -- SINCRONIZACION REMOTO --
+ git push origin master
+ 
+ -- DESCARGAR ACCHIVOS ACTULIZADOS --
+ git pull

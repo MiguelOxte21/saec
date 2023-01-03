@@ -1,0 +1,31 @@
+<!doctype html>
+<html>
+<head>
+    <title>jQuery ImageSelect && chosen</title>
+    <!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="chosen.css">
+	<link rel="stylesheet" href="ImageSelect.css">
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script src="chosen.jquery.js"></script>
+<script src="ImageSelect.jquery.js"></script>
+
+</head>
+<body>
+    <div class="container">
+	
+	
+	
+<select class="my-select">
+ <option data-img-src="http://websemantics.github.io/Image-Select/img/adnan.png">Adnan Sagar</option>
+ <option data-img-src="http://websemantics.github.io/Image-Select/img/rena.png">Rena Cugelman</option>
+ <option selected="selected" data-img-src="http://websemantics.github.io/Image-Select/img/tavis.png">Tavis Lochhead</option>
+ <option data-img-src="http://websemantics.github.io/Image-Select/img/brian.png">Brain Cugelman</option>
+</select>
+
+<script>
+ $(".my-select").chosen();
+</script>
+ </div>
+</body>
+</html>
