@@ -1,8 +1,8 @@
 <?php
 
 $Localhost = 'localhost';
-$Usuario_BD = 'root';
-$Password_BD = '';
+$Usuario_BD = 'congreso';
+$Password_BD = 'abc123$';
 $Nombre_BD = 'congreso';
 
 try{
@@ -15,7 +15,7 @@ catch(PDOException $e){
 }
 
 
-$DB_con1= new mysqli('localhost','root', '', 'congreso');
+$DB_con1= new mysqli('localhost','congreso', 'abc123$', 'congreso');
 if($DB_con1-> connect_error){
 die ('no se pudo conectar a la base de datoas');
 }

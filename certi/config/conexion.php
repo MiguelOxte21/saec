@@ -10,7 +10,7 @@
         protected function Conexion(){
             try {
                 /*TODO: Cadena de Conexion QA*/
-				$conectar = $this->dbh = new PDO("mysql:local=localhost;dbname=congreso","root","");
+				$conectar = $this->dbh = new PDO("mysql:local=localhost;dbname=congreso","congreso","abc123$");
                 /*TODO: Cadena de Conexion Produccion*/
 				//$conectar = $this->dbh = new PDO("mysql:local=localhost;dbname=andercode_diplomas","diploma1","@ndercode");
 				return $conectar;
@@ -29,7 +29,7 @@
         /*TODO: Ruta principal del proyecto */
         public static function ruta(){
             //QA
-            return "http://localhost:80/congreso/certi/";
+            return "https://congresosyeventos.valladolid.tecnm.mx/congreso/certi/";
             //Produccion
             //return "http://diplomas.anderson-bastidas.com/";
         }
