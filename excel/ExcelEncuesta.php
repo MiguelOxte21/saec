@@ -6,7 +6,7 @@ require ' ../../../SAC/Conexion.php';
 use PhpOffice\PhpSpreadsheet\Spreadsheet;
 use PhpOffice\PhpSpreadsheet\IOFactory;
 
-$sql= "SELECT id_encueta, nombre_completo, apellido, respuesta, email, semestre_grupo, nombree_taller FROM respuestas";
+$sql= "SELECT id_encueta, nombre_completo, matricula, respuesta, email, semestre_grupo, nombree_taller FROM respuestas";
 $resultado = $DB_con1->query($sql);
 $excel = new Spreadsheet();
 $hojaActiva =$excel->getActiveSheet();
@@ -21,7 +21,7 @@ $hojaActiva->getColumnDimension('C')->setWidth(30);
 $hojaActiva -> setCellValue('C1','Nombre del alumno');
 
 $hojaActiva->getColumnDimension('D')->setWidth(30);
-$hojaActiva -> setCellValue('D1','Apellido del alumno');
+$hojaActiva -> setCellValue('D1','matricula del alumno');
 
 $hojaActiva->getColumnDimension('E')->setWidth(50);
 $hojaActiva -> setCellValue('E1','Respuesta de la encuesta');
@@ -41,7 +41,7 @@ while ($row =$resultado->fetch_assoc())
     $hojaActiva->setCellValue("A".$fila, "$num");
     $hojaActiva -> setCellValue('B'.$fila, $row['id_encueta']);
     $hojaActiva -> setCellValue('C'.$fila,$row['nombre_completo']);
-    $hojaActiva -> setCellValue('D'.$fila,$row['apellido']);
+    $hojaActiva -> setCellValue('D'.$fila,$row['matricula']);
     $hojaActiva -> setCellValue('E'.$fila,$row['respuesta']);
     $hojaActiva -> setCellValue('F'.$fila,$row['email']);
     $hojaActiva -> setCellValue('G'.$fila,$row['semestre_grupo']);
