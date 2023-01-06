@@ -19,7 +19,6 @@ extract($datosCarrera);
         <tr>
             <th>Nombre</th>
             <th>Matrícula</th>
-            <th>Correo</th>
             <th>Semestre</th>
             <th>Status</th>
             <th>Comentarios</th>
@@ -32,7 +31,6 @@ extract($datosCarrera);
         <tr>
             <th>Nombre</th>
             <th>Matrícula</th>
-            <th>Correo</th>
             <th>Semestre</th>
             <th>Status</th>
             <th>Comentarios</th>
@@ -49,7 +47,6 @@ extract($datosCarrera);
             <tr>
                 <td><?php echo $row->nombre_alumno  . ' ' . $row->apellido_alumno; ?></td>
                 <td><?php echo $row->matricula; ?></td>
-                <td><?php echo $row->correo_user; ?></td>
                 <td><?php echo $row->semestre_grupo; ?></td>
                 <td>
                     <?php
