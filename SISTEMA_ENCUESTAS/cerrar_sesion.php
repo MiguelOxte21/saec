@@ -3,4 +3,4 @@
 	session_start();
 	session_destroy();
 
-	header("http://localhost/congreso-master/index.php");
+	header("../index.php");
