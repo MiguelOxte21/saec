@@ -1,5 +1,5 @@
 <?php
-include ("conexion.php");
+include ("SAC/Conexion.php");
 ?>
 <!DOCTYPE html>
 <html lang="es">

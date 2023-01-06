@@ -25,7 +25,7 @@
                         $_SESSION["usu_correo"]=$resultado["usu_correo"];
                         $_SESSION["rol_id"]=$resultado["rol_id"];
                         /*TODO: Si todo esta correcto indexar en home */
-                        header("Location:".Conectar::ruta()."view/UsuHome/");
+                        header("Location:".conectar::ruta()."view/UsuHome/");
                         exit();
                     }else{
                         /*TODO: En caso no coincidan el usuario o la contraseña */
