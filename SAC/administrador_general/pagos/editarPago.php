@@ -35,7 +35,7 @@ if (isset($_GET['edit_id']) && !empty($_GET['edit_id'])) {
 
 if (isset($_POST['btn_save_updates'])) {
     $id_producto = $_POST['id_producto'];
-    $nombre_pago = $_POST['nombre'];
+    $nombre = $_POST['nombre'];
     $precio = $_POST['precio'];
     $descripcion = $_POST['descripcion'];
     $imagen = $_POST['imagen'];
@@ -49,7 +49,7 @@ if (isset($_POST['btn_save_updates'])) {
             // tabla productos
             $sql = 'UPDATE productos SET nombre=:nombre, precio=:precio, descripcion=:descripcion, imagen=:imagen WHERE id_producto=:id_producto';
             $result = $DB_con->prepare($sql);
-            $result->bindValue(':nombre', $nombre_pago, PDO::PARAM_STR);
+            $result->bindValue(':nombre', $nombre, PDO::PARAM_STR);
             $result->bindValue(':precio', $precio, PDO::PARAM_STR);
             $result->bindValue(':descripcion', $descripcion, PDO::PARAM_STR);
             $result->bindValue('imagen', $imagen, PDO::PARAM_STR);
@@ -161,7 +161,7 @@ if (isset($_POST['btn_save_updates'])) {
                                             <br>
                                             <div class="form-group">
                                                 <label for="exampleFormControlInput1">Nombre</label>
-                                                <input class="form-control form-control-solid" id="exampleFormControlInput1" type="text" name="nombre" value="<?php echo $nombre_pago; ?>" required>
+                                                <input class="form-control form-control-solid" id="exampleFormControlInput1" type="text" name="nombre" value="<?php echo $nombre; ?>" required>
                                             </div>
                                             <div class="form-group">
                                                 <label for="exampleFormControlInput1">Precio</label>
