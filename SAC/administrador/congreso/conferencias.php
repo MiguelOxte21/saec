@@ -149,7 +149,7 @@ if (isset($_GET['delete_id'])) { //id del instructor
                                 <div class="page-header-icon"><i data-feather=""></i></div>
                                 <span>Conferencias <p>Las conferencias serán publicados una vez que active la cuenta del instructor</p></span>
                             </h1>
-                            <p><a href="nueva_conferencia.php"><button class="btn btn-primary" type="button">Agregar Conferencia</button></a><a href="../../../excel/Excelconferencia.php"><button class="btn btn-light" type="button">Reporte de conferencia</button></a></p>
+                            <p><a href="nueva_conferencia.php"><button class="btn btn-primary" type="button">Agregar Conferencia</button><span>   </span><a href="../../../excel/Excelconferencia.php"><button class="btn btn-light" type="button">Descargar Reporte</button></a></p>
                         </div>
                     </div>
                 </div>
