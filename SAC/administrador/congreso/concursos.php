@@ -142,7 +142,7 @@ if (isset($_GET['delete_id'])) {
                                 <div class="page-header-icon"><i data-feather=""></i></div>
                                 <span>Concursos <p>Los concursos serán publicados una vez que active la cuenta del instructor</p></span>
                             </h1>
-                            <p><a href="elegir_concurso.php"><button class="btn btn-primary" type="button">Agregar Concurso</button></a><a href="../../../excel/Excelconcurso.php"><button class="btn btn-light" type="button">Reporte de concursos</button></a></p>
+                            <p><a href="elegir_concurso.php"><button class="btn btn-primary" type="button">Agregar Concurso</button></a> <a href="../../../excel/Excelconcurso.php"><button class="btn btn-light" type="button"> Descargar Reporte</button></a></p>
                         </div>
                     </div>
                 </div>
