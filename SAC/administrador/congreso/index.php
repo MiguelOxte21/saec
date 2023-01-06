@@ -149,7 +149,7 @@ if (isset($_GET['delete_id'])) { //id del taller
                                 <div class="page-header-icon"><i data-feather=""></i></div>
                                 <span>Talleres <p>Los talleres serán publicados una vez que active la cuenta del instructor</p></span>
                             </h1>
-                            <p><a href="nuevo_taller.php"><button class="btn btn-primary" type="button">Agregar Taller</button></a> <a href="../../../excel/Exceltaller.php"><button class="btn btn-light" type="button">Reporte de talleres</button></a></p>
+                            <p><a href="nuevo_taller.php"><button class="btn btn-primary" type="button">Agregar Taller</button></a><span>   </span> <a href="../../../excel/Exceltaller.php"><button class="btn btn-light" type="button">Descargar Reporte</button></a></p>
                         </div>
                     </div>
                 </div>
