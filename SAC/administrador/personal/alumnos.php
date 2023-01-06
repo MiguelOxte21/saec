@@ -94,8 +94,8 @@ $uid = $_SESSION["id_administrador_carrera"];
                             </h1>
                             <p style="color: white;">Las modificaciones se guardan automáticamente.</p>
 
-                            <p><a href="registrar_alumno.php"><button class="btn btn-success" type="button">Registrar nuevo alumno</button></a>
-                            <a href="../../../excel/Excel.php"><button class="btn btn-light" type="button">Reporte de alumnos registrados</button></a></p>
+                            <p><a href="registrar_alumno.php"><button class="btn btn-success" type="button">Registrar nuevo alumno</button></a><span>   </span>
+                            <a href="../../../excel/Excel.php"><button class="btn btn-light" type="button">Descargar Reporte</button></a></p>
 
 
                             <?php foreach ($datosCarrera as $row) { ?>
