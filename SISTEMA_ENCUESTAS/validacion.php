@@ -31,7 +31,7 @@ $query = "SELECT * FROM usuarios WHERE id_usuario = '$id_usuario' AND clave = '$
 		}
 
 	} else {
-		header("Location: ../../../../congreso-master/index.php");
+		header("Location: ../../../../congreso/index.php");
 	}
 
 	if (!$query) {
