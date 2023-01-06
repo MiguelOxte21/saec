@@ -19,7 +19,7 @@ if (isset($_SESSION['tiempo'])) {
   if ($vida_session > $inactivo) {
     session_unset();
     session_destroy();
-    header("Location: ../../../congreso/index.php");
+    header("Location: ../../index.php");
     exit();
   } else {  // si no ha caducado la sesion, actualizamos
     $_SESSION['tiempo'] = time();
