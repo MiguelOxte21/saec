@@ -28,7 +28,7 @@
         /*TODO: Ruta principal del proyecto */
         public static function ruta(){
             
-            return "http://localhost:80/congreso/certi/";
+            return "https://congresoyeventos.valladolid.tecnm.mx:443/congreso/certi/";
             
         }
 
