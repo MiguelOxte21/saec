@@ -12,7 +12,6 @@
                 /*TODO: Cadena de Conexion QA*/
 				$conectar = $this->dbh = new PDO("mysql:local=localhost;dbname=congreso","congreso","abc123$");
                 /*TODO: Cadena de Conexion Produccion*/
-				//$conectar = $this->dbh = new PDO("mysql:local=localhost;dbname=andercode_diplomas","diploma1","@ndercode");
 				return $conectar;
 			} catch (Exception $e) {
                 /*TODO: En Caso hubiera un error en la cadena de conexion */
