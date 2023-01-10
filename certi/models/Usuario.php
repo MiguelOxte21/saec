@@ -9,7 +9,7 @@
                 $pass = $_POST["usu_pass"];
                 if(empty($correo) and empty($pass)){
                     /*TODO: En caso esten vacios correo y contraseña, devolver al index con mensaje = 2 */
-                    header("Location:".conectar::ruta()."index.php?m=2");
+                    header("Location:".Conectar::ruta()."index.php?m=2");
 					exit();
                 }else{
                     $sql = "SELECT * FROM tm_usuario WHERE usu_correo=? and usu_pass=? and est=1";
@@ -25,11 +25,11 @@
                         $_SESSION["usu_correo"]=$resultado["usu_correo"];
                         $_SESSION["rol_id"]=$resultado["rol_id"];
                         /*TODO: Si todo esta correcto indexar en home */
-                        header("Location:".conectar::ruta()."view/UsuHome/");
+                        header("Location:".Conectar::ruta()."view/UsuHome/");
                         exit();
                     }else{
                         /*TODO: En caso no coincidan el usuario o la contraseña */
-                        header("Location:".conectar::ruta()."index.php?m=1");
+                        header("Location:".Conectar::ruta()."index.php?m=1");
                         exit();
                     }
                 }
