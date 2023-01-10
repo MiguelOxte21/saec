@@ -7,7 +7,7 @@
         protected $dbh;
 
         /*TODO: Funcion Protegida de la cadena de Conexion */
-        protected function Conexion(){
+        protected function conexion(){
             try {
                 /*TODO: Cadena de Conexion QA*/
 				$conectar = $this->dbh = new PDO("mysql:local=localhost;dbname=congreso","congreso","abc123$");
