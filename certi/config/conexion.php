@@ -28,7 +28,7 @@
         /*TODO: Ruta principal del proyecto */
         public static function ruta(){
             
-            return "https://congresoyeventos.valladolid.tecnm.mx:443/congreso/certi/";
+            return "https://congresosyeventos.valladolid.tecnm.mx:443/congreso/certi/";
             
         }
 
