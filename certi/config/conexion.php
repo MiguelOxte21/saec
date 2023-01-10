@@ -28,10 +28,9 @@
 
         /*TODO: Ruta principal del proyecto */
         public static function ruta(){
-            //QA
-            return "https://congresosyeventos.valladolid.tecnm.mx/congreso/certi/";
-            //Produccion
-            //return "http://diplomas.anderson-bastidas.com/";
+            
+            return "http://localhost:80/congreso/certi/";
+            
         }
 
     }
