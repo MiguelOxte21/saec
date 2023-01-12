@@ -101,7 +101,7 @@ $uid = $_SESSION["id_administrador_carrera"];
                             <?php foreach ($datosCarrera as $row) { ?>
                                 <form method="post">
                                     <button class="btn btn-dark" type="submit" name="activar">Activar Todos los Alumnos</button>
-                                    <input type="hidden" name="id_administrador_carrera" value="<?php echo $row['id_administrador_carrera']; ?>">
+                                    <input type="hidden" name="id_adminCarrera" value="<?php echo $row['id_adminCarrera']; ?>">
 
                                 </form>
                             <?php break;
@@ -109,7 +109,7 @@ $uid = $_SESSION["id_administrador_carrera"];
 
                             <?php
                             if (isset($_POST['activar'])) {
-                                $uid = $_POST['id_administrador_carrera'];
+                                $uid = $_POST['id_adminCarrera'];
                                 $sentencia = $DB_con->prepare("UPDATE alumnos SET alumnos.status_alumno = 1 WHERE alumnos.id_adminCarrera=:uid;");
                                 $sentencia->bindParam(':uid', $uid);
                                 $sentencia->execute();
