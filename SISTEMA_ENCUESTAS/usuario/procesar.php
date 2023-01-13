@@ -17,10 +17,10 @@ $talleres= $_POST['talleres'];
 
 
 
-$sql = 'INSERT INTO respuestas(id_encueta, nombre_completo, matricula, email, nombree_taller, semestre_grupo, respuesta) 
-VALUES(:id_encueta, :nombre_completo, :matricula, :email, :nombree_taller, :semestre_grupo, :respuesta)';
+$sql = 'INSERT INTO respuestas(id_encuesta, nombre_completo, matricula, email, nombree_taller, semestre_grupo, respuesta) 
+VALUES(:id_encuesta, :nombre_completo, :matricula, :email, :nombree_taller, :semestre_grupo, :respuesta)';
             $result = $DB_con->prepare($sql);
-            $result->bindValue(':id_encueta', $id_encuesta, PDO::PARAM_INT);
+            $result->bindValue(':id_encuesta', $id_encuesta, PDO::PARAM_INT);
             $result->bindValue(':nombre_completo', $nombre, PDO::PARAM_STR);
             $result->bindValue(':matricula', $matricula, PDO::PARAM_STR);
             $result->bindValue(':email', $correo, PDO::PARAM_STR);
