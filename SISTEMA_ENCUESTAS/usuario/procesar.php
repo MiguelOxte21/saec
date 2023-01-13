@@ -1,7 +1,10 @@
 <?php
 
 require('../conexion.php');
+
 require('../../SAC/Conexion.php');
+session_start();
+
 $id_encuesta = $_POST['id_encuesta'];   
 $nombre = $_POST['nombre'];
 $matricula = $_POST['apellido'];
@@ -33,11 +36,11 @@ VALUES(:id_encueta, :nombre_completo, :matricula, :email, :nombree_taller, :seme
 
 
 $query10 = "SELECT * FROM encuestas WHERE id_encuesta = '$id_encuesta'";
-$resultado10 = $con->query($query10);
+$resultado10= $con->query($query10);
 $row10 = $resultado10->fetch_assoc();
 
 $ids = array();
-session_start();
+
 if (!isset($_SESSION["id_alumno"]) || $_SESSION["id_alumno"] == null) {
     print "<script>window.location='index.php';</script>";
 }
@@ -59,7 +62,7 @@ if (isset($_SESSION['tiempo'])) {
 }
 
 
-include('../../SAC/Conexion.php');
+
 
 ?>
 
@@ -209,7 +212,7 @@ include('../../SAC/Conexion.php');
                                     $query6 = "INSERT INTO usuarios_encuestas (id_usuario, id_encuesta, nombre, apellidos, email, matricula, semestre_grupo ) VALUES ('$id_usuario', '$id_encuesta', '$nomAlumno', '','$email','$matricula', '$semestre_grupo1')";
                                     $resultado6 = $con->query($query6);
 
-                                    if ($row10['estado'] == '0') {
+                                    if ($row10['estado'] == '1') {
                                         for ($i = 1; $i <= 100; $i++) {
 
                                             if (isset($_POST[$i])) {
