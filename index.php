@@ -46,7 +46,7 @@ if (isset($_SESSION["id_administrador_general"])) {
 
     <!-- Main CSS File -->
     <link href="css/style.min.css" rel="stylesheet">
-    <link rel="shortcut icon" href="favicon.png">
+    <!--<link rel="shortcut icon" href="favicon.png">-->
 </head>
 
 <body>
