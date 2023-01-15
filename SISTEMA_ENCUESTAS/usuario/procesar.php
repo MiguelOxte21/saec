@@ -17,10 +17,10 @@ $talleres= $_POST['talleres'];
 
 
 
-$sql = 'INSERT INTO respuestas(id_encuesta, nombre_completo, matricula, email, nombree_taller, semestre_grupo, respuesta) 
-VALUES(:id_encuesta, :nombre_completo, :matricula, :email, :nombree_taller, :semestre_grupo, :respuesta)';
+$sql = 'INSERT INTO respuestas(id_encueta, nombre_completo, matricula, email, nombree_taller, semestre_grupo, respuesta) 
+VALUES(:id_encueta, :nombre_completo, :matricula, :email, :nombree_taller, :semestre_grupo, :respuesta)';
             $result = $DB_con->prepare($sql);
-            $result->bindValue(':id_encuesta', $id_encuesta, PDO::PARAM_INT);
+            $result->bindValue(':id_encueta', $id_encuesta, PDO::PARAM_INT);
             $result->bindValue(':nombre_completo', $nombre, PDO::PARAM_STR);
             $result->bindValue(':matricula', $matricula, PDO::PARAM_STR);
             $result->bindValue(':email', $correo, PDO::PARAM_STR);
@@ -209,7 +209,7 @@ if (isset($_SESSION['tiempo'])) {
                                         $email = $row->email;
                                     }
 
-                                    $query6 = "INSERT INTO usuarios_encuestas (id_usuario, id_encuesta, nombre, apellidos, email, matricula, semestre_grupo ) VALUES ('$id_usuario', '$id_encuesta', '$nomAlumno', '','$email','$matricula', '$semestre_grupo1')";
+                                    $query6 = "INSERT INTO usuarios_encuestas (id_usuario, id_encuesta, nombre, email, matricula, semestre_grupo ) VALUES ('$id_usuario', '$id_encuesta', '$nomAlumno','$email','$matricula', '$semestre_grupo1')";
                                     $resultado6 = $con->query($query6);
 
                                     if ($row10['estado'] == '1') {
