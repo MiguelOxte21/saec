@@ -13,7 +13,9 @@ $query3 = "SELECT encuestas.titulo, encuestas.descripcion, preguntas.id_pregunta
 		WHERE preguntas.id_encuesta = '$id_encuesta'";
 $respuesta3 = $con->query($query3);
 $row3 = $respuesta3->fetch_assoc();
+
 session_start();
+
 if (!isset($_SESSION["id_alumno"]) || $_SESSION["id_alumno"] == null) {
     print "<script>window.location='index.php';</script>";
 }
