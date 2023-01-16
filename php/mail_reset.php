@@ -44,7 +44,7 @@ try {
           <br/>Si esto fue un error, simplemente ignore este correo electrónico y no pasará nada.
           <br/>Para restablecer su contraseña tenga en cuenta el siguiente código
           <h3>' . $codigo . '</h3>
-          <p><a href="http://localhost/congreso-master/reset.php?email=' . $email . '&token=' . $token . '">
+          <p><a href="http://congresosyeventos.valladolid.tecnm.mx/reset.php?email=' . $email . '&token=' . $token . '">
           Para restablecer su contraseña da clic aquí</a></p>
           <br/><br/>Saludos';
 
