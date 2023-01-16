@@ -74,9 +74,10 @@ include('../../SAC/Conexion.php');
     <link rel='stylesheet' href='../../vendor/fullcalendar/fullcalendar.css' />
     <link rel='stylesheet' href='../../vendor/animate/animate.css' />
 
-    <!-- Main CSS File -->
+    <!-- Main CSS File 
+    <link rel="../../shortcut icon" href="favicon.png">-->
+	 
     <link href="../../css/style.min.css" rel="stylesheet">
-    <link rel="../../shortcut icon" href="favicon.png">
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <style>
