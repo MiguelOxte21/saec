@@ -13,10 +13,6 @@ $semestre_grupo= $_POST['semestre_grupo'];
 $respuesta= $_POST['respuesta'];
 $talleres= $_POST['talleres'];
 
-
-
-
-
 $sql = 'INSERT INTO respuestas(id_encueta, nombre_completo, matricula, email, nombree_taller, semestre_grupo, respuesta) 
 VALUES(:id_encueta, :nombre_completo, :matricula, :email, :nombree_taller, :semestre_grupo, :respuesta)';
             $result = $DB_con->prepare($sql);
@@ -220,13 +216,13 @@ if (isset($_SESSION['tiempo'])) {
 
                                                 $id = $ids[$i];
 
-                                                $query2 = "SELECT id_opcion, id_pregunta, valor FROM opciones WHERE id_opcion = '$ids[$i]'";
+                                                $query2 = "SELECT id_opcion, id_pregunta FROM opciones WHERE id_opcion = '$ids[$i]'";
                                                 $resultado2 = $con->query($query2);
 
                                                 if ($row2 = $resultado2->fetch_assoc()) {
                                                     $id_opcion = $row2['id_opcion'];
                                                     $query3 = "INSERT INTO resultados (id_opcion) 
-							VALUES ('$id_opcion')";
+							                        VALUES ('$id_opcion')";
                                                     $resultado3 = $con->query($query3);
                                                     if ($resultado3) {
                                                         echo "Respuesta guardada";
@@ -248,14 +244,13 @@ if (isset($_SESSION['tiempo'])) {
                     </div>
                 </div>
             </div>
-
-
-
-        </section>
-        <center>
+            <center>
             <br />
             <a class="btn btn-primary" href="index.php">VOLVER</a> <a class="btn btn-primary" href="../../certi/">Obtener reconocimiento</a> 
-        </center>
+            </center>
+
+        </section>
+     
 
         <!-- Optional JavaScript -->
         <!-- jQuery first, then Popper.js, then Bootstrap JS -->
