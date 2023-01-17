@@ -163,7 +163,7 @@ while ($row = $conrConferencias->fetch(PDO::FETCH_OBJ)) {
                             <a href="perfil.php">Perfil</a>
                         </li>
                         <li class="menu-item">
-                                        <a href="index.php">Encuesta</a>
+                                        <a href="SISTEMA_ENCUESTAS/usuario/index.php">Encuesta</a>
                                     </li>
                         <li class="menu-item">
                             <a href="logout.php">Salir</a>
