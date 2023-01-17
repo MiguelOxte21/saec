@@ -97,20 +97,16 @@ extract($datosCarrera);
                             </h1>
                             <p style="color: white;">Aquí se encuentran todos los alumnos que realizaron si pago mediante Paypal.</p>
 
-                            <?php foreach ($datosCarrera as $row) { ?>
+                            
                                 <form method="post">
                                     <button class="btn btn-dark" type="submit" name="activar">Activar</button>
-                                    <input type="hidden" name="id_administrador_carrera" value="<?php echo $row['id_administrador_carrera']; ?>">
+                                    <input type="hidden" name="id_administrador_carrera" value="">
                                 </form>
-                            <?php break;
-                            } ?>
 
                             <?php
                             if (isset($_POST['activar'])) {
-                                $uid = $_POST['id_administrador_carrera'];
                                 $sentencia = $DB_con->prepare("UPDATE transacciones INNER JOIN ventas on transacciones.id_venta = ventas.id_venta INNER JOIN alumnos on transacciones.id_alumno = alumnos.id_alumno SET alumnos.status_alumno=1 WHERE ventas.status='completo' AND alumnos.id_adminCarrera = :uid");
-                                $sentencia->bindParam(':uid', $uid);
-                                $sentencia->execute();
+                                $sentencia->execute(array(':uid' => $datosCarrera["id_adminCarrera"]));
                             }
                             ?>
                         </div>
