@@ -167,7 +167,7 @@ include('../../SAC/Conexion.php');
 
 
 
-                        <form  action="procesar.php" method="Post" autocomplete="off">
+                        <form  action="procesar2.php" method="Post" autocomplete="off">
                             <input type="hidden" id="id_encuesta" name="id_encuesta" value="<?php echo $id_encuesta ?>" />
                             <div class="row g-3needs-validation" novalidate>
                 <div class="col-md-4">
