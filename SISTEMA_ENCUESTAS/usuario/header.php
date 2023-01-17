@@ -64,7 +64,7 @@ while ($row = $conrConferencias->fetch(PDO::FETCH_OBJ)) {
                 <div class="header-bottom-content display-flex">
                     <div class="logo" style="width:70px;height:70px;position:relative;">
                         <a href="../../inicio.php">
-                            <img src="../../images/logos/<?php echo $img; ?>" alt="" style="width:90%;height:90%;position:absolute;" />
+                            <img src="../../images/bloggrid-heading-bg.jpg" alt="" style="width:90%;height:90%;position:absolute;" />
                         </a>
                     </div>
                     <div class="menu-search display-flex">
@@ -121,7 +121,7 @@ while ($row = $conrConferencias->fetch(PDO::FETCH_OBJ)) {
                     <a href="../../inicio.php">
 
 
-                        <img src="../../images/logos/<?php echo $img; ?>" style="width:100%;height:100%;position:absolute;" />
+                        <img src="../../images/bloggrid-heading-bg.jpg" style="width:100%;height:100%;position:absolute;" />
 
                     </a>
                 </div>
