@@ -96,13 +96,13 @@ while ($row = $conrConferencias->fetch(PDO::FETCH_OBJ)) {
                                         <a href="avisos.php">Avisos</a>
                                     </li>
                                     <li class="menu-item curent-menu-item">
+                                        <a href="SISTEMA_ENCUESTAS/usuario/index.php">Encuesta</a>
+                                    </li>
+                                    <li class="menu-item curent-menu-item">
                                         <a href="pagar/index.php">Pagar</a>
                                     </li>
                                     <li class="menu-item curent-menu-item">
                                         <a href="perfil.php">Perfil</a>
-                                    </li>
-                                    <li class="menu-item curent-menu-item">
-                                        <a href="SISTEMA_ENCUESTAS/usuario/index.php">Encuesta</a>
                                     </li>
                                     
                                     <li class="menu-item curent-menu-item">
@@ -160,14 +160,14 @@ while ($row = $conrConferencias->fetch(PDO::FETCH_OBJ)) {
                         }
                         ?>
                         <li class="menu-item">
-                            <a href="perfil.php">Perfil</a>
-                        </li>
+                                        <a href="SISTEMA_ENCUESTAS/usuario/index.php">Encuesta</a>
+                                    </li>
                         <li class="menu-item curent-menu-item">
                                         <a href="pagar/index.php">Pagar</a>
                                     </li>
                         <li class="menu-item">
-                                        <a href="SISTEMA_ENCUESTAS/usuario/index.php">Encuesta</a>
-                                    </li>
+                            <a href="perfil.php">Perfil</a>
+                        </li>
                         <li class="menu-item">
                             <a href="logout.php">Salir</a>
                         </li>
