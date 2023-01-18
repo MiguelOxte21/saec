@@ -36,9 +36,6 @@ if (isset($_SESSION['tiempo'])) {
     $_SESSION['tiempo'] = time();
 }
 
-
-include('../../SAC/Conexion.php');
-
 ?>
 
 <!DOCTYPE html>
