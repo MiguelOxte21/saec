@@ -71,7 +71,7 @@ if($p1==$p2){
                                
                                  <hr>
                                      <p class="mb-3 text-success">   Ir al inicio</p>
-                                <button type="submit" class=" btn btn-primary  text-white">  <a href="http://localhost/congreso-master/index.php" title="Vovler al inicio"><i class='fas fa-home icon'></i></a></button>
+                                <button type="submit" class=" btn btn-primary  text-white">  <a href="https://congresosyeventos.valladolid.tecnm.mx" title="Vovler al inicio"><i class='fas fa-home icon'></i></a></button>
 
                         </div>
 
