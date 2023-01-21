@@ -201,7 +201,7 @@ while ($row = $datosAlumnos->fetch(PDO::FETCH_OBJ)) {
                                             total: '<?php echo $total; ?>',
                                             currency: 'MXN'
                                         },
-                                        description: "Compra de productos a Develoteca:$<?php //echo number_format($total, 2); 
+                                        description: "Compra de productos al SAEC:$<?php //echo number_format($total, 2); 
                                                                                         ?>",
                                         custom: "<?php echo $SID;
                                                     ?>#<?php echo openssl_encrypt($idVenta, COD, KEY);
