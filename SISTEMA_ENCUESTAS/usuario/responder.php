@@ -44,7 +44,7 @@ if (isset($_SESSION['tiempo'])) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" >
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Sistema de Administración de Eventos y Congresos</title>
 
@@ -143,7 +143,7 @@ if (isset($_SESSION['tiempo'])) {
     <?php include "header.php"; ?>
     <main>
         <section class="heading-page">
-            <img src="../../images/<?php echo $img; ?>" alt="">
+            <img src="../../images/bloggrid-heading-bg.jpg" alt="">
             <div class="container">
                 <div class="heading-page-content">
                     <div class="au-page-title text-center">
@@ -165,7 +165,7 @@ if (isset($_SESSION['tiempo'])) {
 
 
                         <form  action="procesar2.php" method="Post" autocomplete="off">
-                            <input type="hidden" id="id_encuesta" name="id_encuesta" value="<?php echo $id_encuesta ?>" />
+                            <input type="hidden" id="id_encuesta" name="id_encuesta" value="<?php echo $id_encuesta ?>" >
                             <div class="row g-3needs-validation" novalidate>
                 <div class="col-md-4">
                                         <labeL class="form-label">
