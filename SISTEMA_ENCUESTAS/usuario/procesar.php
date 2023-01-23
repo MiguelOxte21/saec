@@ -165,7 +165,7 @@ if (isset($_SESSION['tiempo'])) {
     <?php include "header.php"; ?>
     <main>
         <section class="heading-page">
-            <img src="../../images/bloggrid-heading-bg.jpg" alt="">
+            <img src="../../images/<?php echo $img; ?>" alt="">
             <div class="container">
                 <div class="heading-page-content">
                     <div class="au-page-title text-center">
