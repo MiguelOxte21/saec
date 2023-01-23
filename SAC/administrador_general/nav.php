@@ -9,9 +9,7 @@
             <a class="nav-link" href="carreras/index.php">
                 <div class="nav-link-icon"><i data-feather="folder"></i></div>Carreras
             </a>
-            <a class="nav-link" href="../SISTEMA_ENCUESTAS/administrador/index.php">
-                <div class="nav-link-icon"><i data-feather="folder"></i></div>Encuestas
-            </a>
+           
 
             <a class="nav-link" href="pagos/index.php">
                 <div class="nav-link-icon"><i data-feather="dollar-sign"></i></div>Pagos
