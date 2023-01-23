@@ -158,7 +158,7 @@ if (isset($_SESSION['tiempo'])) {
         </section>
         <section class="testimonials background-grey section-padding-small">
             <div class="container">
-                <div class="section-title section-title-center ">
+                <div class="section-title section-title-left ">
                
                     <div class="container text">
 
