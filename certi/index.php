@@ -1,10 +1,9 @@
 <?php
-  /*TODO: Llamando Cadena de Conexion */
+
   require_once("config/conexion.php");
 
   if(isset($_POST["enviar"]) and $_POST["enviar"]=="si"){
     require_once("models/Usuario.php");
-    /*TODO: Inicializando Clase */
     $usuario = new Usuario();
     $usuario->login();
   }
@@ -92,3 +91,4 @@
 
   </body>
 </html>
+
