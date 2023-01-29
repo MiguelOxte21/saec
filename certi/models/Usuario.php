@@ -25,7 +25,7 @@
                         $_SESSION["usu_correo"]=$resultado["usu_correo"];
                         $_SESSION["rol_id"]=$resultado["rol_id"];
                         /*TODO: Si todo esta correcto indexar en home */
-                        header("Location:".Conectar::ruta()."view/UsuHome/");
+                        header("Location:".Conectar::ruta()."/certi/view/UsuHome/");
                         exit();
                     }else{
                         /*TODO: En caso no coincidan el usuario o la contraseña */
@@ -35,7 +35,6 @@
                 }
             }
         }
-
         /*TODO: Mostrar todos los cursos en los cuales esta inscrito un usuario */
         public function get_cursos_x_usuario($usu_id){
             $conectar= parent::conexion();
