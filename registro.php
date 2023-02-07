@@ -58,7 +58,12 @@ if (isset($_POST['btnsave'])) {
     $id_concurso = null;
     $id_equipo = null;
 
-
+    $usu_pass = 12345; 
+    $usu_apem= null;
+    $usu_sex = null;
+    $usu_telf = null;
+    $usu_dni = null;
+    $fech_crea = null;
     // ecriptamos la contraseña
     $password = password_hash($pass, PASSWORD_DEFAULT, array("cost" => 15));
 
@@ -86,35 +91,6 @@ if (isset($_POST['btnsave'])) {
             $result->execute();
             $lastId = $DB_con->lastInsertId();
 
-            $passw = 123456; //rol alumn23456o
-
-            $sql = 'INSERT INTO tm_usuario(usu_id, usu_nom, usu_apep, usu_correo,rol_id, est) VALUES(:id_user,:nombre_alumno,:apellido_alumno,:correo_user, :idrol, :est)';
-            $result = $DB_con->prepare($sql);
-            $result->bindValue(':id_user', $lastId, PDO::PARAM_INT);
-            $result->bindValue(':nombre_alumno', $nombre_alumno, PDO::PARAM_STR);
-            $result->bindValue(':apellido_alumno', $apellido_alumno, PDO::PARAM_STR);
-            $result->bindValue(':correo_user', $correo_user, PDO::PARAM_STR);
-            
-            $result->bindValue(':idrol', $idrol, PDO::PARAM_INT);
-            $result->bindValue(':est', $est, PDO::PARAM_INT);
-            $result->execute();
-            $lastId = $DB_con->lastInsertId();
-
-            // tabla usuarios de la tabla de encustas
-            $sql = 'INSERT INTO usuarios(id_usuario, clave, nombres, apellidos, email, matricula, semestre_grupo, id_tipo_usuario) VALUES(:id_user,:password,:nombre_alumno,:apellido_alumno,:correo_user,:matricula ,:semestre_grupo,:id_rol)';
-            $result = $DB_con->prepare($sql);
-            
-            $result->bindValue(':id_user', $lastId, PDO::PARAM_STR);
-            $result->bindValue(':password', $password, PDO::PARAM_STR);
-            $result->bindValue(':nombre_alumno', $nombre_alumno, PDO::PARAM_STR);
-            $result->bindValue(':apellido_alumno', $apellido_alumno, PDO::PARAM_STR);
-            $result->bindValue(':correo_user', $correo_user, PDO::PARAM_STR);
-            $result->bindValue(':matricula', $matricula, PDO::PARAM_STR);
-            $result->bindValue(':semestre_grupo', $semestre_grupo, PDO::PARAM_STR);
-            $result->bindValue(':id_rol', $id_rol, PDO::PARAM_INT);
-            $result->execute();
-            
-
             // tabla alumnos
             $sql = 'INSERT INTO alumnos(nombre_alumno,apellido_alumno,matricula,semestre_grupo,status_alumno,comentarios,id_user,id_adminCarrera,id_taller,id_concurso,id_equipo,grupo_etnico,promediolengua) VALUES(:nombre_alumno, :apellido_alumno, :matricula, :semestre_grupo, :status_alumno, :comentarios, :id_user, :id_adminCarrera, :id_taller, :id_concurso, :id_equipo, :grupo_etnico, :promediolengua)';
             $result = $DB_con->prepare($sql);
@@ -134,6 +110,37 @@ if (isset($_POST['btnsave'])) {
             $result->bindValue(':grupo_etnico', $grupo_etnico, PDO::PARAM_STR);
             $result->bindValue(':promediolengua', $promediolengua, PDO::PARAM_STR);
 
+            $result->execute();
+            
+            $sql = 'INSERT INTO tm_usuario(usu_id, usu_nom, usu_apep, usu_apem,usu_correo,usu_pass,usu_sex,usu_telf, rol_id,usu_dni, fech_crea,est) VALUES(:id_user,:nombre_alumno,:apellido_alumno,: usu_apem,:correo_user,:usu_pass,:usu_sex,:usu_telf, :idrol,:usu_dni, :fech_crea, :est)';
+            $result = $DB_con->prepare($sql);
+            $result->bindValue(':id_user', $lastId, PDO::PARAM_INT);
+            $result->bindValue(':nombre_alumno', $nombre_alumno, PDO::PARAM_STR);
+            $result->bindValue(':apellido_alumno', $apellido_alumno, PDO::PARAM_STR);
+            $result->bindValue(':usu_apem', $usu_apem, PDO::PARAM_STR);
+            $result->bindValue(':correo_user', $correo_user, PDO::PARAM_STR);
+            $result->bindValue(':usu_pass', $usu_pass, PDO::PARAM_STR);
+            $result->bindValue(':idrol', $idrol, PDO::PARAM_INT);
+            $result->bindValue(':usu_sex',  $usu_sex, PDO::PARAM_STR);
+            $result->bindValue(':usu_telf',$usu_telf, PDO::PARAM_STR);
+            $result->bindValue(':usu_dni',$usu_dni, PDO::PARAM_STR);
+            $result->bindValue(':fech_crea',$fech_crea, PDO::PARAM_STR);
+            $result->bindValue(':est', $est, PDO::PARAM_INT);
+            $result->execute();
+           
+        
+            // tabla usuarios de la tabla de encustas
+            $sql = 'INSERT INTO usuarios(id_usuario, clave, nombres, apellidos, email, matricula, semestre_grupo, id_tipo_usuario) VALUES(:id_user,:password,:nombre_alumno,:apellido_alumno,:correo_user,:matricula ,:semestre_grupo,:id_rol)';
+            $result = $DB_con->prepare($sql);
+            
+            $result->bindValue(':id_user', $lastId, PDO::PARAM_STR);
+            $result->bindValue(':password', $password, PDO::PARAM_STR);
+            $result->bindValue(':nombre_alumno', $nombre_alumno, PDO::PARAM_STR);
+            $result->bindValue(':apellido_alumno', $apellido_alumno, PDO::PARAM_STR);
+            $result->bindValue(':correo_user', $correo_user, PDO::PARAM_STR);
+            $result->bindValue(':matricula', $matricula, PDO::PARAM_STR);
+            $result->bindValue(':semestre_grupo', $semestre_grupo, PDO::PARAM_STR);
+            $result->bindValue(':id_rol', $id_rol, PDO::PARAM_INT);
             $result->execute();
 
             $DB_con->commit();
